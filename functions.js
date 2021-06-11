@@ -20,3 +20,33 @@ async function callFetchWithGet(){
 
 }
 
+async function callFetchWithPost(mensagem){
+    let headers = new Headers();
+    const options = {
+        method : 'Post',
+        mode: 'cors',
+        headers:{
+            'Accept':'application/json',
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify({
+            'mensagem':mensagem
+        })
+    } await fetch(url,options);
+}
+
+async function callFetchWithPut(){
+    let headers = new Headers();
+    const options = {
+        method : 'Put',
+        mode: 'cors',
+        headers: headers 
+    }
+
+async function callFetchWithDelete(){
+    let headers = new Headers();
+    const options = {
+        method : 'Delete',
+        mode: 'cors',
+        headers: headers 
+    }
