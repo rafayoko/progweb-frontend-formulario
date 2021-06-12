@@ -20,7 +20,7 @@ async function callFetchWithGet(){
 
 }
 
-async function callFetchWithPost(mensagem){
+async function callFetchWithPost(Titulo, Status, AnoLancamento){
 
     const options = {
         method : 'Post',
@@ -30,13 +30,16 @@ async function callFetchWithPost(mensagem){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({
-            'mensagem':mensagem
+            'Titulo':Titulo,
+            'Status':Status,
+            'AnoLancamento': AnoLancamento
+
         })
     } 
     await fetch(url,options);
 }
 
-async function callFetchWithPut(id, novaMensagem){
+async function callFetchWithPut(id,Titulo, Status, AnoLancamento){
     const options = {
         method : 'Put',
         mode: 'cors',
@@ -45,7 +48,10 @@ async function callFetchWithPut(id, novaMensagem){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({
-            'mensagem': novaMensagem
+            'Titulo':Titulo,
+            'Status':Status,
+            'AnoLancamento': AnoLancamento
+
         })
     }   
   await fetch(`${url}${id}`, options);
@@ -69,20 +75,21 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("entrei na função");
     const form = document.forms['postForm'];
-    const mensagem = form["mensagem"].value;
-    callFetchWithPost(mensagem);
+    const Titulo = form["Titulo"].value;
+    const Status = form["Status"].value;
+    const AnoLancamento = form["AnoLancamento"].value;
     return false; //evitar o reload na tela.
  
 }
-
-//Formulários
 
 function submitPut(){
 
     const form = document.forms['putForm'];
     const id = form["id"].value;
-    const mensagem = form["mensagem"].value;
-    callFetchWithPut(id,mensagem);
+    const Titulo = form["Titulo"].value;
+    const Status = form["Status"].value;
+    const AnoLancamento = form["AnoLancamento"].value;
+    callFetchWithPut(id,Titulo, Status, AnoLancamento);
     return false; //evitar o reload na tela.
  
 }
@@ -92,8 +99,9 @@ function submitDelete(){
 
     const form = document.forms['deleteForm'];
     const id = form["id"].value;
-
-    callFetchWithDelete(id );
+    const Titulo = form["Titulo"].value;
+    const Status = form["Status"].value;
+    callFetchWithDelete(id);
     return false; //evitar o reload na tela.
  
 }
