@@ -21,11 +21,11 @@
     <form id="postForm"> 
         <label for="Titulo">Filme ou Séries:</label>
         <input type="text" id="Titulo" name="Titulo"/>
-        <button type="submit" onclick= "return submitPost()">Submit</button>
+       
 
         <label for="Status">Status:</label>
         <input type="text" id="Status" name="Status"/>
-        <button type="submit" onclick= "return submitPost()">Submit</button>
+        
 
         <label for="AnoLancamento">Ano de Lançamento:</label>
         <input type="text" id="AnoLancamento" name="AnoLancamento"/>
@@ -36,15 +36,19 @@
     <h2>Substituir Filme ou Série</h2>
     <form id="putForm"> 
         <label>Id:<input type="text" id="id" name="id"/></label>
+
       <label>Titulo:<input type="text" id="Titulo" name="Titulo"/></label>
+
      <label>Status:<input type="text" id="Status" name="Status"/></label>
+     
+
      <label>AnoLancamento:<input type="text" id="AnoLancamento" name="AnoLancamento"/></label>
         <button type="submit" onclick= "return submitPut()">Submit</button>
 
     </form>
     
     
-    <h2>Deletar filme (Delete)</h2>
+    <h2>Deletar Filme ou Série</h2>
     <form id="deleteForm">
     <label>Id:<input type="text" name="id"/></label>        
      <button type="submit" onclick="return submitDelete()">Submit</button>
