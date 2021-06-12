@@ -9,9 +9,9 @@ async function callFetchWithGet(){
     }
     const output = document.getElementById("json");
     const response = await fetch(url, options);
-    if (response.status>=200 && response.status <=300){
+
+    if (response.status >=200 && response.status <=300){
         console.log("Funcionou");
-    
        output.innerHTML = await response.text();
     } else{
         console.log("Deu errado");
