@@ -16,29 +16,29 @@
     <p id="json"></p>
 
 
-    <h2>Adicionar filme ou série</h2>
+    <h2>Adicionar novo Filme ou Série</h2>
 
     <form id="postForm"> 
         <label for="Titulo">Filme ou Séries:</label>
         <input type="text" id="Titulo" name="Titulo"/>
         <button type="submit" onclick= "return submitPost()">Submit</button>
 
-   
         <label for="Status">Status:</label>
         <input type="text" id="Status" name="Status"/>
         <button type="submit" onclick= "return submitPost()">Submit</button>
 
-        <label for="AnoLancamento">Status:</label>
+        <label for="AnoLancamento">Ano de Lançamento:</label>
         <input type="text" id="AnoLancamento" name="AnoLancamento"/>
         <button type="submit" onclick= "return submitPost()">Submit</button>
 
-
     </form>
 
-    <h2>Substituir(Put)</h2>
+    <h2>Substituir Filme ou Série</h2>
     <form id="putForm"> 
-      <label>Id:<input type="text" id="mensagem" name="id"/></label>
-     <label>Mensagem:<input type="text" id="mensagem" name="mensagem"/></label>
+        <label>Id:<input type="text" id="id" name="id"/></label>
+      <label>Titulo:<input type="text" id="Titulo" name="Titulo"/></label>
+     <label>Status:<input type="text" id="Status" name="Status"/></label>
+     <label>AnoLancamento:<input type="text" id="AnoLancamento" name="AnoLancamento"/></label>
         <button type="submit" onclick= "return submitPut()">Submit</button>
 
     </form>
