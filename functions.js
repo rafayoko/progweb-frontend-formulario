@@ -20,8 +20,7 @@ async function callFetchWithGet(){
 
 }
 
-async function callFetchWithPost(Titulo, Status, AnoLancamento){
-
+async function callFetchWithPost(titulo, status, anolancamento){
     const options = {
         method : 'Post',
         mode: 'cors',
@@ -30,9 +29,9 @@ async function callFetchWithPost(Titulo, Status, AnoLancamento){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({
-            'Titulo':Titulo,
-            'Status':Status,
-            'AnoLancamento': AnoLancamento
+            'titulo':titulo,
+            'status':status,
+            'anolancamento': anolancamento
 
         })
     } 
@@ -48,9 +47,9 @@ async function callFetchWithPut(id,Titulo, Status, AnoLancamento){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({
-            'Titulo':Titulo,
-            'Status':Status,
-            'AnoLancamento': AnoLancamento
+            'titulo':titulo,
+            'status':status,
+            'anolancamento': anolancamento
 
         })
     }   
@@ -75,21 +74,21 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("entrei na função");
     const form = document.forms['postForm'];
-    const Titulo = form["Titulo"].value;
-    const Status = form["Status"].value;
-    const AnoLancamento = form["AnoLancamento"].value;
+    const titulo = form["titulo"].value;
+    const status = form["status"].value;
+    const anolancamento = form["anolancamento"].value;
+    callFetchWithPost(titulo, status, anolancamento);
     return false; //evitar o reload na tela.
  
 }
 
 function submitPut(){
-
     const form = document.forms['putForm'];
     const id = form["id"].value;
-    const Titulo = form["Titulo"].value;
-    const Status = form["Status"].value;
-    const AnoLancamento = form["AnoLancamento"].value;
-    callFetchWithPut(id,Titulo, Status, AnoLancamento);
+    const titulo = form["titulo"].value;
+    const status = form["status"].value;
+    const anolancamento = form["anolancamento"].value;
+    callFetchWithPut(id,titulo, status, anolancamento);
     return false; //evitar o reload na tela.
  
 }
@@ -99,8 +98,6 @@ function submitDelete(){
 
     const form = document.forms['deleteForm'];
     const id = form["id"].value;
-    const Titulo = form["Titulo"].value;
-    const Status = form["Status"].value;
     callFetchWithDelete(id);
     return false; //evitar o reload na tela.
  
