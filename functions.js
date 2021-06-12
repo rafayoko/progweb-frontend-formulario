@@ -29,16 +29,16 @@ async function callFetchWithPost(titulo, status, anolancamento){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({
-            'titulo':titulo,
-            'status':status,
-            'anolancamento': anolancamento
+            'Título':titulo,
+            'Status':status,
+            'Ano de Lançamento': anolancamento
 
         })
     } 
     await fetch(url,options);
 }
 
-async function callFetchWithPut(id,Titulo, Status, AnoLancamento){
+async function callFetchWithPut(id, novotitulo, novostatus, novoanolancamento){
     const options = {
         method : 'Put',
         mode: 'cors',
@@ -47,9 +47,9 @@ async function callFetchWithPut(id,Titulo, Status, AnoLancamento){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({
-            'titulo':titulo,
-            'status':status,
-            'anolancamento': anolancamento
+            'Título': novotitulo,
+            'Status': novostatus,
+            'Ano de Lançamento': novoanolancamento
 
         })
     }   
@@ -72,7 +72,7 @@ async function callFetchWithDelete(id){
 //Formulários
 
 function submitPost(){
-    console.log("entrei na função");
+    console.log("entrei na função post");
     const form = document.forms['postForm'];
     const titulo = form["titulo"].value;
     const status = form["status"].value;
@@ -83,6 +83,7 @@ function submitPost(){
 }
 
 function submitPut(){
+    console.log("entrei na função put");
     const form = document.forms['putForm'];
     const id = form["id"].value;
     const titulo = form["titulo"].value;
@@ -95,7 +96,7 @@ function submitPut(){
 
 
 function submitDelete(){
-
+    console.log("entrei na função delete");
     const form = document.forms['deleteForm'];
     const id = form["id"].value;
     callFetchWithDelete(id);
