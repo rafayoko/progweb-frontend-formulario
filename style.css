@@ -1,0 +1,78 @@
+div{
+    color: black;
+    text-align:right;
+}
+
+h1, h2, h3{
+    color: wheat;
+}
+
+header {
+    font-family: sans-serif;
+    font-variant: small-caps;
+    font-size: 25px;
+    background-color: teal;
+    line-height: 100%;
+    text-align: center;
+    padding: 2px;
+    margin: 1px,2px,2px,6px;
+}
+body{ 
+    font-family: verdana;
+    font-size: 120%;
+    margin: 2%;
+    background-color: cadetblue;
+}
+a{
+    font-style: italic;
+    display: block;
+    padding: 6px;
+    transition-property: color, background-color;
+    transition-duration: .25s;
+    transition-delay: .1s;    
+}
+.indice{ 
+   width: fit-content;
+   height: fit-content;
+   background-color: teal;
+   display: block;
+   float: left;
+   border: solid 1px wheat;
+   margin-right: 15px;
+   margin-bottom: 1px;
+}
+
+.post{
+    display: block;
+    background-color: teal;
+    width: 470px;
+    height: fit-content;
+    float: left;
+    border: solid 1px wheat;
+    margin: 1px 7px 7px 1px;
+    padding: 4px;
+}
+.put{
+    display: inline-block;
+    background-color: teal;
+    width: 447px;
+    height: fit-content;
+    border: solid 1px wheat;
+    margin: 1px 1px 7px 7px;
+    padding: 20px;
+    
+}
+.delete{
+    display: inline;
+    background-color: teal;
+    width: 427px;
+    height: 200px;
+    float: right;
+    border: solid 1px wheat;
+    margin: 1px 7px 7px 7px;
+    padding: 20px;
+}
+a:hover{
+    background-color: darkslategrey;
+    color: teal;
+}

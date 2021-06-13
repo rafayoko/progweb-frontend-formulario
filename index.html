@@ -4,53 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 11</title>
+    <title>Atividade 8</title>
     <script src="functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-    <h2>Padrão REST</h2>
+    <!---<h2>Padrão REST</h2>
     <a href="javascript:callFetchWithGet()">Get</a>
     <a href="javascript:callFetchWithPost()">Post</a>
     <a href="javascript:callFetchWithPut()">Put</a>
-    <a href="javascript:callFetchWithDelete()">Delete</a>
-    <p id="json"></p>
+    <a href="javascript:callFetchWithDelete()">Delete</a> --->
+    <p id="json"></p> 
 
+<header>
+<h2>Banco de Dados Filmes e Séries 🎬</h2> </header>
+</br>
 
-<h2>Adicionar novo Filme ou Série</h2>
+<section class="post">
+<h2>Adicionar novo Filme ou Série </h2>
 
     <form id="postForm"> 
-        <label for="titulo">Filme ou Série:</label>
-        <input type="text" id="titulo" name="titulo"/>
+      <div>  <label for="titulo">Filme ou Série:</label>
+        <input type="text" id="titulo" name="titulo"/></div>
 
-        <label for="status">Status:</label>
-        <input type="text" id="status" name="status"/>
+       <div> <label for="status">Status:</label>
+        <input type="text" id="status" name="status"/> </div>
         
-        <label for="anolancamento">Ano de Lançamento:</label>
-        <input type="text" id="anolancamento" name="anolancamento"/>
+       <div> <label for="anolancamento">Ano de Lançamento:</label>
+        <input type="text" id="anolancamento" name="anolancamento"/> </div>
        
-        <button type="submit" onclick= "return submitPost()">Submit</button>
+      <div>  <button type="submit" onclick= "return submitPost()">Submit</button> </div>
 
     </form>
 
+</section>
+
+        
+<section class="put">
 <h2>Substituir Filme ou Série</h2>
 
     <form id="putForm"> 
-        <label>id:<input type="text" id="id" name="id"/></label>
-        <label>titulo:<input type="text" id="titulo" name="titulo"/></label>
-        <label>status:<input type="text" id="status" name="status"/></label>
-        <label>AnoLancamento:<input type="text" id="anolancamento" name="anolancamento"/></label>
+       <div> <label>Id:<input type="text" id="id" name="id"/></label> </div>
+       <div> <label>Título:<input type="text" id="titulo" name="titulo"/></label></div>
+        <div><label>Status:<input type="text" id="status" name="status"/></label></div>
+       <div> <label>Ano de Lançamento:<input type="text" id="anolancamento" name="anolancamento"/></label></div>
 
-        <button type="submit" onclick= "return submitPut()">Submit</button>
-        </form>
-    
-    
- <h2>Deletar Filme ou Série</h2>
+       <div> <button type="submit" onclick= "return submitPut()">Submit</button></div>
+        </form> 
+</section>
+
+<section class="delete">
+     <h2>Deletar Filme ou Série</h2>
      <form id="deleteForm">
-         <label>Id:<input type="text" name="id"/></label>        
-         <button type="submit" onclick="return submitDelete()">Submit</button>
+        <div> <label>Id:<input type="text" name="id"/></label>        </div>
+        <div> <button type="submit" onclick="return submitDelete()">Submit</button></div>
          </form>
-
+</section>
     
 </body> 
 </html>
