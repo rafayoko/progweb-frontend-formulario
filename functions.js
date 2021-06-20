@@ -1,4 +1,5 @@
 let url = "https://tt905-2021-progweb-mensagens.herokuapp.com/mensagens/"
+let url = "https://tt905-2021-progweb-mensagens.herokuapp.com/database/"
 
 async function callFetchWithGet(){
     let headers = new Headers();
